@@ -1,0 +1,14 @@
+{
+    "terraform-ls.rootModules": [
+        "/Users/pasqualespica/my_data/PAS7B/my_workspaces/terraform-azure-course/p7b-terraform-test"
+    ],
+    "terraform.languageServer": {
+        "external": true,
+        "pathToBinary": "",
+        "args": [
+            "serve"
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
+    }
+}
