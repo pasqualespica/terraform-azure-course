@@ -7,6 +7,8 @@ https://github.com/in4it/terraform-azure-course
   - [Table of Contents](#table-of-contents)
   - [Intstall](#intstall)
   - [Introduction to terraform HCL](#introduction-to-terraform-hcl)
+    - [Var, types, ...](#var-types-)
+    - [Commands](#commands)
   - [Terraform with Azure](#terraform-with-azure)
   - [Azure Services](#azure-services)
   - [Advanced Terraform](#advanced-terraform)
@@ -26,7 +28,7 @@ https://github.com/in4it/terraform-azure-course
 - [resources](https://www.terraform.io/docs/configuration/resources.html) require -[providers](https://www.terraform.io/docs/configuration/providers.html)
 - []
 
-see `main.tf`
+see `p7b-terraform-test/main.tf`
 ```tf
 
 > var.myvar
@@ -68,26 +70,75 @@ hello terraform
 ]
 ```
 
-see ``
+see `p7b-terraform-test/resources.tf`
 
+ogni volta che si aggiunge o modifica una `resource`
+
+```
+terraform init
+```
+
+poi
+
+```
+terraform console
+```
+
+e scrivi 
+
+```
+> var.AMIS[var.AWS_REGION]
+my ami
+```
+
+---
+
+### Var, types, ...
+
+<img src="media/00_var_type.png" alt="Logo" width="600" height="00">
+<img src="media/01_var_type.png" alt="Logo" width="600" height="300">
+<img src="media/02_complex_type.png" alt="Logo" width="600" height="300">
+<img src="media/03_list_map_set.png" alt="Logo" width="600" height="300">
+<img src="media/04_object.png" alt="Logo" width="600" height="300">
+<img src="media/05_tuple.png" alt="Logo" width="600" height="300">
+<img src="media/06_mix1.png" alt="Logo" width="600" height="300">
+<img src="media/07_mix2.png" alt="Logo" width="600" height="300">
+
+
+### Commands
+<img src="media/08_cmd_apply.png" alt="Logo" width="600" height="200">
+<img src="media/09_cmd_plan.png" alt="Logo" width="600" height="200">
+<img src="media/10_cmd_init.png" alt="Logo" width="600" height="200">
+<img src="media/11_cmd_destroy.png" alt="Logo" width="600" height="200">
+
+---
+
+`01_first-steps`
+
+**What is my public IP**
+
+https://www.whatsmyip.org/
+
+`curl ifconfig.so`
+
+**Generate my public key**
+
+```
+ssh-keygen -f mykey
+```
 
 
 ## Terraform with Azure
 
-wdwd
 
 ## Azure Services
-
-dcdcd
 
 
 ## Advanced Terraform
 
-dcdc
 
 ## More Azure Services
 
-dwwd
 
 
 
