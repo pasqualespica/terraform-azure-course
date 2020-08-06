@@ -117,7 +117,7 @@ my ami
 
 ---
 
-`01_first-steps` 
+_see example folder_ `01_first-steps` 
 
 **What is my public IP**
 
@@ -146,7 +146,7 @@ ssh-keygen -f mykey
 
 [providers](https://www.terraform.io/docs/providers/index.html)
 
-`02_resource-group` 
+_see example folder_ `02_resource-group` 
 
 ```
 cd 02_resource-group
@@ -211,7 +211,40 @@ resource-group-demo
 <img src="media/09-sec.png" alt="Logo" width="600" height="300">
 <img src="media/10-sec.png" alt="Logo" width="600" height="300">
 
+_see example folder_ `03_network-security-groups`
 
+<img src="media/ex_net_sec_grp.png" alt="Logo" width="600" height="300">
+
+```
+ssh-keygen -f mykey
+
+terraform init
+
+terraform apply
+
+```
+
+poi da **azure portal** prendere il public IP for `demo-vm` e 
+
+```
+ssh -i mykey demo@52.232.5.129
+```
+
+```
+demo@demo-instance:~$ ifconfig -a
+```
+
+e verificare che il `resource "azurerm_network_security_group" "internal-facing" `
+funziona ossia sulla porta `80` non va ma sulle altre si
+
+```
+demo@demo-instance:~$ telnet 10.0.0.5 80
+Trying 10.0.0.5...
+telnet: Unable to connect to remote host: Connection refused
+
+demo@demo-instance:~$ telnet 10.0.0.5 81
+Trying 10.0.0.5...
+```
 
 ## Azure Services
 
