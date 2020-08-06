@@ -14,6 +14,8 @@ https://github.com/in4it/terraform-azure-course
     - [Virtual Networks](#virtual-networks)
     - [Virtual Machine](#virtual-machine)
     - [Network Security Group](#network-security-group)
+    - [Availability (Fault and Update domains & zones)](#availability-fault-and-update-domains--zones)
+    - [Scale Sets and Load Balancer](#scale-sets-and-load-balancer)
   - [Azure Services](#azure-services)
   - [Advanced Terraform](#advanced-terraform)
   - [More Azure Services](#more-azure-services)
@@ -245,6 +247,87 @@ telnet: Unable to connect to remote host: Connection refused
 demo@demo-instance:~$ telnet 10.0.0.5 81
 Trying 10.0.0.5...
 ```
+
+### Availability (Fault and Update domains & zones)
+
+<img src="media/01-ava.png" alt="Logo" width="600" height="300">
+<img src="media/02-ava.png" alt="Logo" width="600" height="300">
+<img src="media/03-ava.png" alt="Logo" width="600" height="300">
+<img src="media/04-ava.png" alt="Logo" width="600" height="300">
+
+### Scale Sets and Load Balancer
+
+<img src="media/01-scale.png" alt="Logo" width="600" height="300">
+<img src="media/02-scale.png" alt="Logo" width="600" height="300">
+<img src="media/03-scale.png" alt="Logo" width="600" height="300">
+<img src="media/04-scale.png" alt="Logo" width="600" height="300">
+<img src="media/05-scale.png" alt="Logo" width="600" height="300">
+<img src="media/06-scale.png" alt="Logo" width="600" height="300">
+<img src="media/07-scale.png" alt="Logo" width="600" height="300">
+
+_see example folder_ `04_autoscaling`
+
+<img src="media/ex-autoscaling.png" alt="Logo" width="600" height="300">
+
+```
+terraform init
+
+terraform apply
+
+```
+
+da **azure portal** prendere l'Indirizzo IP pubblico da `autoscaling-demo-pas7b`  e vefichiamo che `nginx` risponde ed è in piedi
+
+```
+curl 13.94.142.136
+```
+
+se tutto ok dovremmo vedere qualcosa del genere 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+
+poi accediamo ad una delle instance in questo modo 
+```
+ssh -l demo -i mykey -po 50000  13.94.142.136
+```
+
+e qui installiamo [stress](https://linux.die.net/man/1/stress) cosi
+
+```
+sudo apt-get install stress
+``` 
+proviamo a stessare la cpu `demo@demo000000:~$ cat /proc/cpuinfo ` as esemnpio cosi :
+
+```
+stress --cpu 1
+```
+
 
 ## Azure Services
 
