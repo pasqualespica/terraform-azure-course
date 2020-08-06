@@ -10,6 +10,9 @@ https://github.com/in4it/terraform-azure-course
     - [Var, types, ...](#var-types-)
     - [Commands](#commands)
   - [Terraform with Azure](#terraform-with-azure)
+    - [Resource Group](#resource-group)
+    - [Virtual Networks](#virtual-networks)
+    - [Virtual Machine](#virtual-machine)
   - [Azure Services](#azure-services)
   - [Advanced Terraform](#advanced-terraform)
   - [More Azure Services](#more-azure-services)
@@ -130,6 +133,7 @@ ssh-keygen -f mykey
 
 ## Terraform with Azure
 
+### Resource Group
 <img src="media/01-rg.png" alt="Logo" width="600" height="300">
 <img src="media/02-rg.png" alt="Logo" width="600" height="300">
 <img src="media/03-rg.png" alt="Logo" width="600" height="300">
@@ -169,6 +173,28 @@ westeurope
 resource-group-demo
 
 ```
+
+### Virtual Networks
+
+<img src="media/01-vnet.png" alt="Logo" width="600" height="300">
+<img src="media/02-vnet.png" alt="Logo" width="600" height="300">
+<img src="media/03-vnet.png" alt="Logo" width="600" height="300">
+<img src="media/04-vnet.png" alt="Logo" width="600" height="300">
+<img src="media/05-vnet.png" alt="Logo" width="600" height="300">
+<img src="media/06-vnet.png" alt="Logo" width="600" height="300">
+
+### Virtual Machine
+
+<img src="media/01-vm.png" alt="Logo" width="600" height="300">
+<img src="media/02-vm.png" alt="Logo" width="600" height="300">
+<img src="media/03-vm.png" alt="Logo" width="600" height="300">
+<img src="media/04-vm.png" alt="Logo" width="600" height="300">
+<img src="media/05-vm.png" alt="Logo" width="600" height="300">
+<img src="media/06-vm.png" alt="Logo" width="600" height="300">
+<img src="media/07-vm.png" alt="Logo" width="600" height="300">
+<img src="media/08-vm.png" alt="Logo" width="600" height="300">
+<img src="media/09-vm.png" alt="Logo" width="600" height="300">
+<img src="media/10-vm.png" alt="Logo" width="600" height="300">
 
 
 
