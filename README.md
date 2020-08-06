@@ -113,7 +113,7 @@ my ami
 
 ---
 
-`01_first-steps`
+`01_first-steps` 
 
 **What is my public IP**
 
@@ -129,6 +129,48 @@ ssh-keygen -f mykey
 
 
 ## Terraform with Azure
+
+<img src="media/01-rg.png" alt="Logo" width="600" height="300">
+<img src="media/02-rg.png" alt="Logo" width="600" height="300">
+<img src="media/03-rg.png" alt="Logo" width="600" height="300">
+<img src="media/04-rg.png" alt="Logo" width="600" height="300">
+<img src="media/05-rg.png" alt="Logo" width="600" height="300">
+<img src="media/06-rg.png" alt="Logo" width="600" height="300">
+<img src="media/07-rg.png" alt="Logo" width="600" height="300">
+
+
+[providers](https://www.terraform.io/docs/providers/index.html)
+
+`02_resource-group` 
+
+```
+cd 02_resource-group
+
+terraform init
+
+terraform apply
+
+### then type `yes`
+
+(base) $ terraform console
+> var.location
+westeurope
+> azurerm_resource_group.demo.id
+/subscriptions/3cdf66cf-94eb-4c70-b74c-5c9a21d7a4e3/resourceGroups/resource-group-demo
+> azurerm_resource_group.demo.name
+resource-group-demo
+> azurerm_resource_group.demo.location
+westeurope
+> azurerm_resource_group.demo.tags
+{
+  "env" = "resource-group-demo"
+}
+> azurerm_resource_group.demo.tags["env"]
+resource-group-demo
+
+```
+
+
 
 
 ## Azure Services
