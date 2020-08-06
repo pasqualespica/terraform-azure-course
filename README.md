@@ -13,6 +13,7 @@ https://github.com/in4it/terraform-azure-course
     - [Resource Group](#resource-group)
     - [Virtual Networks](#virtual-networks)
     - [Virtual Machine](#virtual-machine)
+    - [Network Security Group](#network-security-group)
   - [Azure Services](#azure-services)
   - [Advanced Terraform](#advanced-terraform)
   - [More Azure Services](#more-azure-services)
@@ -196,6 +197,19 @@ resource-group-demo
 <img src="media/09-vm.png" alt="Logo" width="600" height="300">
 <img src="media/10-vm.png" alt="Logo" width="600" height="300">
 
+
+### Network Security Group
+
+<img src="media/01-sec.png" alt="Logo" width="600" height="300">
+<img src="media/02-sec.png" alt="Logo" width="600" height="300">
+<img src="media/03-sec.png" alt="Logo" width="600" height="300">
+<img src="media/04-sec.png" alt="Logo" width="600" height="300">
+<img src="media/05-sec.png" alt="Logo" width="600" height="300">
+<img src="media/06-sec.png" alt="Logo" width="600" height="300">
+<img src="media/07-sec.png" alt="Logo" width="600" height="300">
+<img src="media/08-sec.png" alt="Logo" width="600" height="300">
+<img src="media/09-sec.png" alt="Logo" width="600" height="300">
+<img src="media/10-sec.png" alt="Logo" width="600" height="300">
 
 
 
